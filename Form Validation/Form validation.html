@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="style1.css">
+
+</head>
+<body>
+    <div class="container">        
+        <!--signup-->
+        <form  class="form" name="login" method="post" onsubmit="return validateform()">
+		      <div class="text">
+            <h1>JOIN US</h1>
+            <br>
+          </div>
+            <div class="animated-input">
+                <input type="text" placeholder="Username" name="name1" required>
+                <input type="emailid" placeholder="Email ID" name="email1" required>
+                <input type="tel" placeholder="Phone Number" name="phno" required>
+                <input type="password" placeholder="Password" name="password1" required>
+                <input type="password" placeholder="ConfirmPassword" name="password2" required>
+
+            </div>
+          
+            <br>
+            <div class="checkBox">
+                <input type="checkbox" name="checkbox" id="checkbox" required>
+                <span class="text">I agree with term & conditions</span>
+              </div>
+              <div class="formGroup">
+                <button class="btn2" type="submit">REGISTER</button>
+                <p class="account">Already have account?<a href="#">Login</a></p>
+              </div>
+              
+            <br>
+        </form> 
+        
+        
+    </div>
+    <script>
+
+      function validateform(){  
+var name=document.forms["login"]["name1"].value;  
+var email=document.forms["login"]["email1"].value; 
+var phone=document.forms["login"]["phno"].value;
+var password=document.forms["login"]["password1"].value;
+var password_c=document.forms["login"]["password2"].value;
+var letters = /^[A-Za-z]+$/;
+if(name.match(letters)){
+
+}
+else{
+  alert("Invalid username!!"); 
+}
+
+  
+var eregex=/^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/;
+if (email.match(eregex)) 
+{  
+}
+else{
+  alert("Please enter a valid e-mail address!!!");
+}
+regex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+
+if(phone.match(regex)){
+}else{
+  alert("Invalid phone number!!!");
+}
+
+if(password == password_c){
+}
+else{
+  alert("Passwords do not match!!!")
+}
+
+if(name.match(letters)  && email.match(eregex) && (phone.match(regex)) && (password == password_c)){
+  alert("Logged in successfully!!!");
+}}
+ 
+    </script>
+</body>
+</html>
