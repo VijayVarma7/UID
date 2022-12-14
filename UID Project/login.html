@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="container1">
+
+        <form  class="form">
+		<div class="text">
+            <h1>Login</h1>
+  <br>
+        </div>
+            <div class="animated-input">
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+            </div>
+            <br>
+            
+            <div class="check">
+                <div>
+                    <input type="checkbox" id="check">
+                    <label for="check" class="disc"></label>
+                    
+                    <label for="check" class="remember">Remember</label>
+                </div>
+                <br>
+                <p class="forget"><a href="forgotpass.html">Forgot Password?</a></p>
+            </div>
+        </form>
+            <div class="wrapper">
+                <div class="captcha-area">
+                  <div class="captcha-img">
+                    <img src="captcha-bg.png" alt="Captch Background">
+                    <span class="captcha"></span>
+                  </div>
+                  <button class="reload-btn"><i class="fas fa-redo-alt"></i></button>
+                </div>
+                <form action="#" class="input-area">
+                  <input type="text" placeholder="Enter captcha" maxlength="6" spellcheck="false" required>
+                  <button class="check-btn">Check</button>
+                  <br>
+                </form>
+                <div class="status-text"></div>
+              </div>     
+                 <script src="script1.js"></script>
+            <br>
+			<button class="btn2" type="submit"><a href="index.html">LOGIN</a></button>
+            <br>
+            <br>
+        <p class="account">Create Account? <a href="signup.html">SignUp</a></p>
+        </form>
+        
+    </div>
+</body>
+</html>
